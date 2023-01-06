@@ -1,9 +1,9 @@
   <% @barks.each do |bark| %>
     <div class="bark_card">
-    <%= image_tag("users/blankuser.png", class:"avatar") %>
+    <%= bark.user.photo.attached? ? cl_image_tag(bark.user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
       <div class="bark">
         <p><%= bark.message %></p>
-        <p><%= bark.created_at %></p>
+        <p><%= time_ago_in_words(bark.created_at) %></p>
       </div>
     </div>
   <% end %>
