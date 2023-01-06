@@ -1,0 +1,2 @@
+class BarksController < ApplicationController
+end
