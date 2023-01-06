@@ -17,4 +17,6 @@ class User < ApplicationRecord
   has_many :follower_users, foreign_key: :followed_id, class_name: "Following"
   # retrieve instances of following users
   has_many :followers, through: :follower_users, source: :follower
+
+  has_one_attached :photo
 end

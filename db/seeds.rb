@@ -8,19 +8,19 @@ puts "Creating a user..."
 User.create(
   name: "Alex",
   email: "alex@test.com",
-  password: "pass",
+  password: "pass123",
 )
 
 User.create(
   name: "Reina",
   email: "reina@test.com",
-  password: "pass",
+  password: "pass123",
 )
 
 User.create(
   name: "Tofu",
   email: "tofu@test.com",
-  password: "pass",
+  password: "pass123",
 )
 
 puts "Creating Barks.."

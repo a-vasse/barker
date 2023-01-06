@@ -1,0 +1,28 @@
+.bark_card {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.bark_card img {
+  height: 100%;
+  padding: 1rem;
+  width: 120px;
+  object-fit: cover;
+}
+
+.bark_card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.bark_card .bark {
+  padding: 16px;
+}

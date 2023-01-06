@@ -1,0 +1,9 @@
+  <% @barks.each do |bark| %>
+    <div class="bark_card">
+    <%= image_tag("users/blankuser.png", class:"avatar") %>
+      <div class="bark">
+        <p><%= bark.message %></p>
+        <p><%= bark.created_at %></p>
+      </div>
+    </div>
+  <% end %>
