@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
+  devise_scope :user do
+    root "devise/sessions#new"
+  end
+
+  resources :pages
 
   resources :users do
     resources :barks
