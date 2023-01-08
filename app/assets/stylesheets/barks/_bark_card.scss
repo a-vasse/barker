@@ -15,10 +15,6 @@
   object-fit: cover;
 }
 
-.bark_card h3 {
-  font-size: smaller;
-}
-
 .bark_card p {
   font-size: 12px;
   line-height: 1.4;
@@ -28,5 +24,21 @@
 }
 
 .bark_card .bark {
+  width: 100%;
   padding: 16px;
+}
+
+.poster {
+  display:flex;
+  align-items: center;
+}
+
+.poster .name {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.posted {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -1,10 +1,10 @@
   <% @barks.each do |bark| %>
     <div class="bark_card">
-    <%= bark.user.photo.attached? ? cl_image_tag(bark.user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+      <%= bark.user.photo.attached? ? cl_image_tag(bark.user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
       <div class="bark">
-        <h3><%= bark.user.name %></h3>
-        <p><%= bark.message %></p>
-        <p><%= time_ago_in_words(bark.created_at) %></p>
+        <div class="poster"><p><span class="name"><%= bark.user.name %></span> @<%= bark.user.handle %></div>
+        <div><p><%= bark.message %></p></div>
+        <div class="posted"><p><%= time_ago_in_words(bark.created_at) %></p></div>
       </div>
     </div>
   <% end %>

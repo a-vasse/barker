@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_06_141925) do
   end
 
   create_table "barks", force: :cascade do |t|
-    t.text "message"
+    t.string "message", limit: 260, null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -64,6 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_06_141925) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name", null: false
+    t.string "handle", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

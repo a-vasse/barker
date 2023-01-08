@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
-
+  validates :handle, presence: true, uniqueness: true
   has_many :barks, dependent: :destroy
 
   # the user follows other users
