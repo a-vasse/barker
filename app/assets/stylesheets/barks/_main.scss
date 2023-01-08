@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+}
+
+.center-bar {
+  width: 40%;
+}
+
+.userbar {
+  display:flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.right-bar {
+  width: 30%;
+}
+
+.feed-logo {
+  margin-bottom: 10%;
+  width: 100%;
+  max-width: 250px;
+}
+
+.userbar .avatar {
+  height: 100%;
+  width: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.user-info {
+  margin-top: 12px;
+  padding: 8px;
+}
+
+.user-info p {
+  font-size: smaller;
+}

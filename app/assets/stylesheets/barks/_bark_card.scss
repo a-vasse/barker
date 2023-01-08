@@ -1,12 +1,11 @@
 .bark_card {
   overflow: hidden;
   height: 120px;
-  width: 100%;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 8px;
+  border: 1px solid #ced4da;
 }
 
 .bark_card img {
@@ -14,6 +13,10 @@
   padding: 1rem;
   width: 120px;
   object-fit: cover;
+}
+
+.bark_card h3 {
+  font-size: smaller;
 }
 
 .bark_card p {

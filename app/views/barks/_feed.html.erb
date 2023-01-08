@@ -2,7 +2,7 @@
     <div class="bark_card">
     <%= bark.user.photo.attached? ? cl_image_tag(bark.user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
       <div class="bark">
-        <p><%= bark.user.name %></p>
+        <h3><%= bark.user.name %></h3>
         <p><%= bark.message %></p>
         <p><%= time_ago_in_words(bark.created_at) %></p>
       </div>

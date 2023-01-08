@@ -1,7 +1,10 @@
 .bark_post {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
   margin: 8px;
+  background-color: white;
+  padding: 8px;
+  border: 1px solid #ced4da;
 }
 
 .bark-post-form {
@@ -9,22 +12,7 @@
   padding-left: 8px;
 }
 
-.post-button {
-  display: inline-block;
-  justify-content: center;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
-  gap: 8px;
-  box-shadow: var(--box-shadow);
-}
-
-.button:hover {
-  background-color: var(--title-color-dark);
-}
-
-.button-icon {
-  margin-left: var(--mb-0-5);
+.bark-post-form-button {
+  display:flex;
+  justify-content:flex-end ;
 }

@@ -1,0 +1,16 @@
+.barker-button {
+  display: inline-block;
+  justify-content: center;
+  background-color: var(--button-color);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 8px;
+  color: $gray;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.barker-button:hover {
+  background-color: var(--button-color-hover);
+  color: $gray;
+}

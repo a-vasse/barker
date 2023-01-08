@@ -1,0 +1,55 @@
+.landing {
+  display: flex;
+  height: 100vh;
+}
+
+.welcome {
+width:50%;
+background: linear-gradient(135deg, #ff670f 0%,#ffcd59 100%);
+display: flex;
+justify-content: center;
+}
+
+.sign-in {
+width: 50%;
+padding:16px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.sign-in-box {
+  width:40%;
+  justify-content: center;
+}
+
+.forgot-pw {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.forgot-pw a {
+  text-decoration: none;
+  font-style: italic;
+  font-size: smaller;
+  margin-bottom: 1rem;
+  color: $gray;
+}
+
+.sign-in-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.introduction {
+  margin-top: 30%;
+  width: 60%;
+  justify-content: flex-end;
+}
+
+.introduction p {
+  margin-top: 8px;
+  color: $white;
+}
