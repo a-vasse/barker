@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_06_141925) do
   end
 
   create_table "barks", force: :cascade do |t|
-    t.string "message", limit: 260, null: false
+    t.text "message", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

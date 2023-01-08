@@ -23,8 +23,6 @@ class BarksController < ApplicationController
     @bark.user = @user
     if @bark.save
       redirect_to barks_path
-    else
-      render :new, status: :unprocessable_entity
     end
   end
 
