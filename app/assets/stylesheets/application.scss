@@ -9,4 +9,9 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/index";
+@import "barks/index";
+
+:root {
+  // --title-color: hsl(var(--hue), var(--sat), 20%);
+
+}

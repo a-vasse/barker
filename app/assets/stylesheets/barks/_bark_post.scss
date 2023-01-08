@@ -1,0 +1,30 @@
+.bark_post {
+  display: flex;
+  align-items: flex-start;
+  margin: 8px;
+}
+
+.bark-post-form {
+  width: 100%;
+  padding-left: 8px;
+}
+
+.post-button {
+  display: inline-block;
+  justify-content: center;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+  gap: 8px;
+  box-shadow: var(--box-shadow);
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button-icon {
+  margin-left: var(--mb-0-5);
+}

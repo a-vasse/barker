@@ -1,0 +1,11 @@
+<div class="bark_post">
+  <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class: "avatar") %>
+  <div class="bark-post-form">
+    <%= simple_form_for [@user, @bark] do |f| %>
+      <%= f.input :message , label: false, placeholder: 'Bark out loud...', input_html: {rows: 2}, wrapper: false %>
+      <div class="d-flex forms-buttons">
+        <%= f.button :submit, 'Bark!', class: "post-button" %>
+      </div>
+    <% end  %>
+  </div>
+</div>
