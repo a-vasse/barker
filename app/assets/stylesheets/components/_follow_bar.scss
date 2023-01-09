@@ -21,7 +21,8 @@
   margin-top: 8px;
   border: 1px solid #ced4da;
   border-radius: 0.5rem;
-  transition: 0.3s
+  transition: 0.3s;
+  padding: 8px;
 }
 
 .follow_card:hover {
@@ -30,7 +31,6 @@
 
 .follow_card img {
   height: 100%;
-  padding: 1rem;
   width: 60px;
   object-fit: cover;
 }
@@ -54,4 +54,13 @@
 .follow-info .name {
   font-size: larger;
   font-weight: bold;
+}
+
+.follow-button {
+  display: flex;
+  align-items: center;
+}
+
+.follow-button .barker-button{
+  margin-top: 0px;
 }

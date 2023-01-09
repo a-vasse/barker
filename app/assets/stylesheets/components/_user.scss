@@ -8,7 +8,7 @@
 }
 
 .user-card {
-  display:flex;
+  display: flex;
   position: relative;
   overflow: hidden;
   background: white;
@@ -45,6 +45,7 @@
 
 .user-info p {
   font-size: smaller;
+  margin-bottom: 0.5rem;
 }
 
 .log-out-button {

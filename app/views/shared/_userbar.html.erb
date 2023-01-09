@@ -8,7 +8,8 @@
   <div class="user-info">
     <%= link_to current_user.name, barks_path(current_user), class: "barker-links-name" %>
     <p>@<%= current_user.handle %></p>
-    <p>Barks: <%= @user.barks.count() %></p>
+    <p>Barks: <%= current_user.barks.count() %></p>
+    <p>Following: <%= current_user.followees.count() %> / Followers: <%= current_user.followers.count() %></p>
     <p><%= current_user.created_at.strftime("Joined: %m/%d/%Y") %></p>
   </div>
   <div class="log-out-button">

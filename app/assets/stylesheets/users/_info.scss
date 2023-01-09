@@ -1,4 +1,5 @@
 .user-top {
+  position: relative;
   display:flex;
   background-color: white;
   background:
@@ -20,13 +21,14 @@
 .user-top-avatar-frame {
   display:flex;
   align-items:center;
+  padding: 1rem;
 }
 .user-top-avatar {
   height:180px;
   width: auto;
-  padding: 1rem;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #ffffff;
 }
 
 .user-top-info {
@@ -35,16 +37,16 @@
   justify-content: flex-end;
 }
 
-.user-top-info-box {
-  display:flex;
-  align-items: center;
-}
-
-.user-top-handle {
-  margin-top:18px;
-  margin-left:12px;
-}
+.user-top-info p {
+    margin-bottom: 4px;
+  }
 
 .info-date {
   font-size: smaller;
+}
+
+.user-follow-button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
 }
