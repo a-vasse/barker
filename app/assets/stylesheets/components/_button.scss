@@ -8,9 +8,30 @@
   color: $gray;
   text-decoration: none;
   transition: 0.3s;
+  text-align: center;
 }
 
 .barker-button:hover {
   background-color: var(--button-color-hover);
   color: $gray;
+}
+
+.barker-button .following-hover {
+  display: none;
+}
+
+.barker-button:hover .following-normal {
+  display: none;
+}
+
+.barker-button:hover .following-hover {
+  display: inline;
+}
+
+.user-follow-button .barker-button {
+  width: 106px;
+}
+
+.follow-button .barker-button {
+  width: 106px;
 }

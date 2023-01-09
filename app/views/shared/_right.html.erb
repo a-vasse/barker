@@ -9,9 +9,20 @@
           <p>@<%= user.handle %></p>
         </div>
       </div>
-      <div class="follow-button">
-        <%= link_to "Follow", "#", class: "barker-button" %>
-      </div>
+      <% if current_user.id != user.id %>
+        <% if !current_user.following?(user) %>
+          <div class="follow-button">
+            <%= link_to "Follow", follow_user_path(user), class:"barker-button" %>
+          </div>
+        <% else  %>
+          <div class="follow-button">
+            <%= link_to unfollow_user_path(user), class:"barker-button" do %>
+              <span class="following-normal">Following</span>
+              <span class="following-hover">Unfollow</span>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
 </div>

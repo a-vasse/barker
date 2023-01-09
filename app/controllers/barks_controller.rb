@@ -1,5 +1,6 @@
 class BarksController < ApplicationController
   def index
+    @admin = User.find(1)
     @users = User.all
     @bark = Bark.new
     @user = current_user

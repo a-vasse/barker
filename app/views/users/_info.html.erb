@@ -6,7 +6,7 @@
     <div class="user-names">
       <%= link_to @user.name, user_path(@user), class: "barker-links-name" %><p>@<%= @user.handle %></p>
     </div>
-    <p class="info-date">Barks: <%= @user.barks.count %> | Followers: <%= @user.followees.count %> | Following: <%= @user.followers.count %></p>
+    <p class="info-date">Barks: <%= @user.barks.count %> | Following: <%= @user.followees.count %> | Followers: <%= @user.followers.count %></p>
     <p><%= @user.created_at.strftime("Joined: %m/%d/%Y") %></p>
   </div>
   <% if current_user.id != @user.id %>
@@ -16,7 +16,10 @@
       </div>
     <% else  %>
       <div class="user-follow-button">
-        <%= link_to "Following", unfollow_user_path(@user), class:"barker-button" %>
+        <%= link_to unfollow_user_path(@user), class:"barker-button" do %>
+          <span class="following-normal">Following</span>
+          <span class="following-hover">Unfollow</span>
+        <% end %>
       </div>
     <% end %>
   <% end %>
