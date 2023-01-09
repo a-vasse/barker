@@ -1,0 +1,54 @@
+.userbar {
+  display:flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 16px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.user-card {
+  display:flex;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  margin-top: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 12px;
+}
+
+.feed-logo {
+  margin-bottom: 10%;
+  width: 100%;
+  max-width: 250px;
+}
+
+.userbar .avatar {
+  height: 100%;
+  width: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.user-avatar-frame {
+  display:flex;
+  align-items: center;
+}
+
+.user-info {
+  padding: 8px;
+  margin-left: 12px;
+}
+
+.user-info p {
+  font-size: smaller;
+}
+
+.log-out-button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}

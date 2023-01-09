@@ -1,12 +1,17 @@
 <div>
   <%= link_to image_tag("shared/logofeed.png", class: "feed-logo"), barks_path(current_user) %>
 </div>
-<div>
-  <%= link_to current_user.photo.attached? ? cl_image_tag(current_user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class: "avatar"), barks_path(current_user) %>
-</div>
-<div class="user-info">
-  <%= link_to current_user.name, barks_path(current_user), class: "barker-links-name" %>
-  <p>@<%= current_user.handle %></p>
-  <p><%= current_user.created_at.strftime("Member Since: %m/%d/%Y") %></p>
-  <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "barker-button" %>
+<div class="user-card">
+  <div class="user-avatar-frame">
+    <%= link_to current_user.photo.attached? ? cl_image_tag(current_user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class: "avatar"), barks_path(current_user) %>
+  </div>
+  <div class="user-info">
+    <%= link_to current_user.name, barks_path(current_user), class: "barker-links-name" %>
+    <p>@<%= current_user.handle %></p>
+    <p>Barks: <%= @user.barks.count() %></p>
+    <p><%= current_user.created_at.strftime("Joined: %m/%d/%Y") %></p>
+  </div>
+  <div class="log-out-button">
+      <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "barker-button" %>
+  </div>
 </div>

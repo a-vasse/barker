@@ -3,5 +3,10 @@
     <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "user-top-avatar") : image_tag("users/blankuser.png", class: "user-top-avatar") %>
   </div>
   <div class="user-top-info">
+    <div class="user-top-info-box">
+      <%= link_to @user.name, user_path(@user), class: "barker-links-name" %>
+      <p class="user-top-handle">@<%= @user.handle %></p>
+    </div>
+    <p class="info-date"><%= @user.created_at.strftime("Member Since: %m/%d/%Y") %></p>
   </div>
 </div>

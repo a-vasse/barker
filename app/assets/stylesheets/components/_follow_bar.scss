@@ -1,3 +1,17 @@
+.right-bar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-card{
+  width: 100%;
+  overflow: hidden;
+  padding: 8px;
+  margin-top: 8px;
+}
+
 .follow_card {
   overflow: hidden;
   height: 60px;
@@ -7,7 +21,11 @@
   margin-top: 8px;
   border: 1px solid #ced4da;
   border-radius: 0.5rem;
-  width: 60%;
+  transition: 0.3s
+}
+
+.follow_card:hover {
+  background: #ced4da;;
 }
 
 .follow_card img {
