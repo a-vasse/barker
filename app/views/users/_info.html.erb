@@ -8,7 +8,7 @@
       <div class="user-names">
         <%= link_to @user.name, user_path(@user), class: "barker-links-name" %><p>@<%= @user.handle %></p>
       </div>
-      <p class="info-date">Barks: <%= @user.barks.count %> | Following: <%= (@user.followees.count -1) %> | Followers: <%= ( @user.followers.count - 1) %></p>
+      <p class="info-date">Barks: <%= @user.barks.count %> | Following: <%= @user.followees.count() %> | Followers: <%= @user.followers.count() %></p>
       <p class="info-date"><%= @user.created_at.strftime("Joined: %m/%d/%Y") %></p>
       <% if current_user.id != @user.id %>
         <% if !current_user.following?(@user) %>
