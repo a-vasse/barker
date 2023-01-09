@@ -9,15 +9,15 @@
     <%= link_to current_user.name, barks_path(current_user), class: "barker-links-name" %>
     <p>@<%= current_user.handle %></p>
     <p>Barks: <%= current_user.barks.count() %></p>
-    <p>Following: <%= current_user.followees.count() %> | Followers: <%= current_user.followers.count() %></p>
+    <p>Following: <%= (current_user.followees.count() - 1) %> | Followers: <%= (current_user.followers.count() -1) %></p>
     <p><%= current_user.created_at.strftime("Joined: %m/%d/%Y") %></p>
-  </div>
-  <div class="log-out-button">
+    <div class="log-out-button">
       <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "barker-button" %>
+    </div>
   </div>
 </div>
 <div class="following-pane">
-  <p>You're Following:</p>
+  <p class="header">You're Following:</p>
   <% @followees.each do |followee| %>
     <div class="follow-card">
       <%= followee.photo.attached? ? cl_image_tag(followee.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
@@ -45,7 +45,7 @@
   <% end %>
 </div>
 <div class="following-pane">
-  <p>You're Followed By:</p>
+  <p class="header">You're Followed By:</p>
   <% @followers.each do |follower| %>
     <div class="follow-card">
       <%= follower.photo.attached? ? cl_image_tag(follower.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>

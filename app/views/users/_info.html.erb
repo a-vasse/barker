@@ -3,24 +3,27 @@
     <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "user-top-avatar") : image_tag("users/blankuser.png", class: "user-top-avatar") %>
   </div>
   <div class="user-top-info">
-    <div class="user-names">
-      <%= link_to @user.name, user_path(@user), class: "barker-links-name" %><p>@<%= @user.handle %></p>
-    </div>
-    <p class="info-date">Barks: <%= @user.barks.count %> | Following: <%= @user.followees.count %> | Followers: <%= @user.followers.count %></p>
-    <p><%= @user.created_at.strftime("Joined: %m/%d/%Y") %></p>
-  </div>
-  <% if current_user.id != @user.id %>
-    <% if !current_user.following?(@user) %>
-      <div class="user-follow-button">
-        <%= link_to "Follow", follow_user_path(@user), class:"barker-button" %>
+    <div class="spacer"></div>
+    <div class="user-spacer">
+      <div class="user-names">
+        <%= link_to @user.name, user_path(@user), class: "barker-links-name" %><p>@<%= @user.handle %></p>
       </div>
-    <% else  %>
-      <div class="user-follow-button">
-        <%= link_to unfollow_user_path(@user), class:"barker-button" do %>
-          <span class="following-normal">Following</span>
-          <span class="following-hover">Unfollow</span>
+      <p class="info-date">Barks: <%= @user.barks.count %> | Following: <%= (@user.followees.count -1) %> | Followers: <%= ( @user.followers.count - 1) %></p>
+      <p class="info-date"><%= @user.created_at.strftime("Joined: %m/%d/%Y") %></p>
+      <% if current_user.id != @user.id %>
+        <% if !current_user.following?(@user) %>
+          <div class="user-follow-button">
+            <%= link_to "Follow", follow_user_path(@user), class:"barker-button" %>
+          </div>
+        <% else  %>
+          <div class="user-follow-button">
+            <%= link_to unfollow_user_path(@user), class:"barker-button" do %>
+              <span class="following-normal">Following</span>
+              <span class="following-hover">Unfollow</span>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-    <% end %>
-  <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

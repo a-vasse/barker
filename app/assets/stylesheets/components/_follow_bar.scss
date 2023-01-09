@@ -1,5 +1,6 @@
 .right-bar {
   width: 30%;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +9,6 @@
 .following-pane{
   width: 100%;
   overflow: hidden;
-  padding: 8px;
   margin-top: 8px;
 }
 
@@ -63,4 +63,5 @@
 
 .follow-button .barker-button{
   margin-top: 0px;
+  margin-right: 4px;
 }
