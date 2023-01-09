@@ -8,7 +8,7 @@ puts "Creating a User..."
 User.create(
   name: "Alex",
   email: "alex@test.com",
-  handle: "admin",
+  handle: "creator",
   password: "pass123"
 ).photo.attach(io: File.open('app/assets/images/users/alex.png'), filename: 'alex.png')
 
@@ -30,10 +30,4 @@ puts "Creating Barks.."
 
 20.times do
   Bark.create(user_id: rand(1..3), message: Faker::Games::StreetFighter.quote)
-end
-
-puts "Creating Followers..."
-
-2.times do
-  Following.create(followed_id: rand(1..3), follower_id: rand(1..3))
 end

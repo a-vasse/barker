@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+  <div class="follow_card">
+    <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+    <div class="follow">
+      <div class="follow-info">
+        <%= link_to user.name, user_path(user), class: "barker-links" %>
+        <p>@<%= user.handle %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

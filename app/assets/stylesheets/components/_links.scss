@@ -1,0 +1,24 @@
+.barker-links {
+  color: $gray;
+  transition: 0.3s;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.barker-links:hover {
+  color: #5a5a5a;
+  font-weight: bolder;
+}
+
+.barker-links-name {
+  color: $gray;
+  transition: 0.3s;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+.barker-links-name:hover {
+  color: #5a5a5a;
+  font-weight: bolder;
+}

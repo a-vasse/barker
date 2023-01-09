@@ -1,0 +1,7 @@
+<div class="user-top">
+  <div class="user-top-avatar-frame">
+    <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "user-top-avatar") : image_tag("users/blankuser.png", class: "user-top-avatar") %>
+  </div>
+  <div class="user-top-info">
+  </div>
+</div>

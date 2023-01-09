@@ -1,49 +1,39 @@
-.bark_card {
+.follow_card {
   overflow: hidden;
-  height: 120px;
+  height: 60px;
   background: white;
   display: flex;
   align-items: center;
-  margin: 8px;
+  margin-top: 8px;
   border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  width: 60%;
 }
 
-.bark_card img {
+.follow_card img {
   height: 100%;
   padding: 1rem;
-  width: 120px;
+  width: 60px;
   object-fit: cover;
 }
 
-.bark_card p {
+.follow_card p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
 }
 
-.bark_card .bark {
+.follow_card .follow {
   width: 100%;
   padding: 16px;
 }
 
-.poster {
-  display:flex;
-  align-items: center;
+.follow-info p {
+  margin-top: 0px;
 }
 
-.poster .name {
+.follow-info .name {
   font-size: larger;
   font-weight: bold;
-}
-
-.poster .handle {
-  margin-top:0px;
-  margin-left:8px;
-}
-
-.posted {
-  display: flex;
-  justify-content: flex-end;
 }

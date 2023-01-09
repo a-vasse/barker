@@ -1,0 +1,13 @@
+<% @barks.each do |bark| %>
+  <div class="bark_card">
+    <%= bark.user.photo.attached? ? cl_image_tag(bark.user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+    <div class="bark">
+      <div class="poster">
+        <%= link_to bark.user.name, user_path(bark.user), class: "barker-links" %>
+        <p class="handle">@<%= bark.user.handle %></p>
+      </div>
+      <div><p><%= bark.message %></p></div>
+      <div class="posted"><p><%= time_ago_in_words(bark.created_at) %></p></div>
+    </div>
+  </div>
+<% end %>
