@@ -5,6 +5,7 @@
   background-color: white;
   padding: 8px;
   border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
 
 .bark-post-form {
@@ -13,6 +14,12 @@
 }
 
 .bark-post-form-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.bark-message {
   display:flex;
   justify-content:flex-end ;
 }

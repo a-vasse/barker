@@ -8,26 +8,30 @@ puts "Creating a User..."
 User.create(
   name: "Alex",
   email: "alex@test.com",
-  handle: "creator",
-  password: "pass123"
+  handle: "architect",
+  password: "administrator999"
 ).photo.attach(io: File.open('app/assets/images/users/alex.png'), filename: 'alex.png')
 
 User.create(
   name: "Reina",
   email: "reina@test.com",
   handle: "wife",
-  password: "pass123"
+  password: "alexsuki123"
 ).photo.attach(io: File.open('app/assets/images/users/reina.png'), filename: 'reina.png')
 
 User.create(
   name: "Tofu",
   email: "tofu@test.com",
   handle: "pet",
-  password: "pass123"
+  password: "alwaysmoody123"
 ).photo.attach(io: File.open('app/assets/images/users/tofu.png'), filename: 'tofu.png')
 
 puts "Creating Barks.."
 
-20.times do
-  Bark.create(user_id: rand(1..3), message: Faker::Games::StreetFighter.quote)
+10.times do
+  Bark.create(user_id: 2, message: Faker::Quote.matz)
+end
+
+10.times do
+  Bark.create(user_id: 3, message: Faker::Quote.matz)
 end
