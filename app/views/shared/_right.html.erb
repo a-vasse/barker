@@ -1,7 +1,7 @@
-<div class="right-card">
+<div class="following-pane">
   <p>Follow These Users:</p>
   <% @users.shuffle.cycle.take(5).each do |user| %>
-    <div class="follow_card">
+    <div class="follow-card">
       <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
       <div class="follow">
         <div class="follow-info">

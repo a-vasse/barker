@@ -16,3 +16,59 @@
       <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "barker-button" %>
   </div>
 </div>
+<div class="following-pane">
+  <p>You're Following:</p>
+  <% @followees.each do |followee| %>
+    <div class="follow-card">
+      <%= followee.photo.attached? ? cl_image_tag(followee.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+      <div class="follow">
+        <div class="follow-info">
+          <%= link_to followee.name, user_path(followee), class: "barker-links" %>
+          <p>@<%= followee.handle %></p>
+        </div>
+      </div>
+      <% if current_user.id != followee.id %>
+        <% if !current_user.following?(followee) %>
+          <div class="follow-button">
+            <%= link_to "Follow", follow_user_path(followee), class:"barker-button" %>
+          </div>
+        <% else  %>
+          <div class="follow-button">
+            <%= link_to unfollow_user_path(followee), class:"barker-button" do %>
+              <span class="following-normal">Following</span>
+              <span class="following-hover">Unfollow</span>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<div class="following-pane">
+  <p>You're Followed By:</p>
+  <% @followers.each do |follower| %>
+    <div class="follow-card">
+      <%= follower.photo.attached? ? cl_image_tag(follower.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+      <div class="follow">
+        <div class="follow-info">
+          <%= link_to follower.name, user_path(follower), class: "barker-links" %>
+          <p>@<%= follower.handle %></p>
+        </div>
+      </div>
+      <% if current_user.id != follower.id %>
+        <% if !current_user.following?(follower) %>
+          <div class="follow-button">
+            <%= link_to "Follow", follow_user_path(follower), class:"barker-button" %>
+          </div>
+        <% else  %>
+          <div class="follow-button">
+            <%= link_to unfollow_user_path(follower), class:"barker-button" do %>
+              <span class="following-normal">Following</span>
+              <span class="following-hover">Unfollow</span>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

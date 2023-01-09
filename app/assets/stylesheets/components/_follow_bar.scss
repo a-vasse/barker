@@ -5,14 +5,14 @@
   align-items: center;
 }
 
-.right-card{
+.following-pane{
   width: 100%;
   overflow: hidden;
   padding: 8px;
   margin-top: 8px;
 }
 
-.follow_card {
+.follow-card {
   overflow: hidden;
   height: 60px;
   background: white;
@@ -25,24 +25,24 @@
   padding: 8px;
 }
 
-.follow_card:hover {
+.follow-card:hover {
   background: #ced4da;;
 }
 
-.follow_card img {
+.follow-card img {
   height: 100%;
-  width: 60px;
+  width: 42px;
   object-fit: cover;
 }
 
-.follow_card p {
+.follow-card p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
 }
 
-.follow_card .follow {
+.follow-card .follow {
   width: 100%;
   padding: 16px;
 }

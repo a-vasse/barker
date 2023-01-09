@@ -4,13 +4,30 @@ class BarksController < ApplicationController
     @users = User.all
     @bark = Bark.new
     @user = current_user
+
     @barks = []
     current_user.followees.each do |follower|
       follower.barks.each do |bark|
         @barks << bark
       end
     end
-    @barks = @barks.sort_by { |bark| bark.created_at}.reverse!
+    @barks = @barks.sort_by(&:created_at).reverse!
+
+    @followees = []
+    current_user.followees.each do |followee|
+      if followee != current_user
+        @followees << followee
+      end
+    end
+    @followees = @followees.sort_by(&:name)
+
+    @followers = []
+    current_user.followers.each do |follower|
+      if follower != current_user
+        @followers << follower
+      end
+    end
+    @followers = @followers.sort_by(&:name)
   end
 
   def create
