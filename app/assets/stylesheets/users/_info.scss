@@ -8,7 +8,7 @@
   margin: 8px;
   border: 1px solid #ced4da;
   overflow: hidden;
-  height: 25vh;
+  height: 30vh;
   margin-bottom: 12px;
 }
 
@@ -31,10 +31,16 @@
   border: 4px solid #ffffff;
 }
 
+.user-names {
+  display:flex;
+  align-items: baseline;
+}
+
 .user-top-info {
   display:flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-bottom: 12px;
 }
 
 .user-top-info p {

@@ -22,4 +22,16 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_users, source: :follower
 
   has_one_attached :photo
+
+  def follow(user)
+    followed_users.create(followed_id: user.id)
+  end
+
+  def unfollow(user)
+    followed_users.find_by(followed_id: user.id).destroy
+  end
+
+  def following?(user)
+    followees.include?(user)
+  end
 end

@@ -9,5 +9,10 @@
       <div><p><%= bark.message %></p></div>
       <div class="posted"><p><%= time_ago_in_words(bark.created_at) %></p></div>
     </div>
+    <% if (current_user == bark.user) %>
+      <div class="delete-button">
+        <%= link_to "♻", bark_path(bark), data: { turbo_method: 'delete', turbo_confirm: "Delete this bark?" }, class: 'barker-button' %>
+      </div>
+    <% end %>
   </div>
 <% end %>

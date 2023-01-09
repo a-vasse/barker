@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   resources :barks
 
   resources :users do
-    resources :barks
+    member do
+      get :follow
+      get :unfollow
+    end
+    resources :barks, only: [:index, :create, :destroy]
   end
 end

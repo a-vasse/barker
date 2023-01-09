@@ -1,4 +1,5 @@
 .bark_card {
+  position: relative;
   overflow: hidden;
   height: 120px;
   background: white;
@@ -46,4 +47,18 @@
 .posted {
   display: flex;
   justify-content: flex-end;
+}
+
+.delete-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.delete-button .barker-button {
+  width: 26px;
+  height: 26px;
+  padding: 1px;
+  margin: -2px;
+  text-align: center;
 }

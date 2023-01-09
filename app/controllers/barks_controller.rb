@@ -24,6 +24,12 @@ class BarksController < ApplicationController
     end
   end
 
+  def destroy
+    @bark = Bark.find(params[:id])
+    @bark.destroy
+    redirect_to barks_path
+  end
+
   private
 
   def bark_params
